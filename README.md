@@ -1,5 +1,7 @@
-[![pipeline status](https://gitlab.com/ric_harvey/nginx-php-fpm/badges/master/pipeline.svg)](https://gitlab.com/ric_harvey/nginx-php-fpm/commits/master)
-![docker hub](https://img.shields.io/docker/pulls/richarvey/nginx-php-fpm.svg?style=flat-square)
-![docker hub](https://img.shields.io/docker/stars/richarvey/nginx-php-fpm.svg?style=flat-square)
+### Based on [https://gitlab.com/ric_harvey/nginx-php-fpm](https://gitlab.com/ric_harvey/nginx-php-fpm)
 
-### This project now lives on [https://gitlab.com/ric_harvey/nginx-php-fpm](https://gitlab.com/ric_harvey/nginx-php-fpm)
+Docker container image with NGINX, PHP 7.2 and PHP-FPM, ideal for working with Laravel or Lumen projects, because the NGINX root directory points to /var/www/public, so you just have to mount your Laravel/Lumen project directory to /var/www:
+
+```bash
+docker run -v my_project_path:/var/www -p 8080:80 -d erodriguezds/nginx-php-fpm
+```
